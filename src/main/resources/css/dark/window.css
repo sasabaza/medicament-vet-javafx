@@ -1,0 +1,1152 @@
+.root {
+    -fx-font-family: 'Noto Sans';
+    -fx-font-weight: normal;
+    -fx-font-size: 13px;
+
+    -fx-text-base-color: #d4d4d4;
+    -fx-text-background-color: -fx-text-base-color;
+
+    -fx-focus-color: -fx-text-base-color;
+    -fx-faint-focus-color: -fx-text-base-color;
+
+    -fx-date-picker-color: #1e3bd7;
+
+    -fx-custom-color: #777777;
+
+    -fx-background: #444444;
+    -fx-background-color: -fx-background;
+    -fx-background-main-color: #444444;
+
+    -fx-button-color: #555555;
+    -fx-button-body-color: -fx-button-color;
+    -fx-button-hover: derive(-fx-button-color, 20%);
+    -fx-button-pressed: derive(-fx-button-color, 10%);
+
+    -fx-button-text-color: -fx-text-base-color;
+
+    -fx-button-action-color: #1e3bd7;
+    -fx-button-action-body-color: -fx-button-action-color;
+    -fx-button-action-hover: derive(-fx-button-action-color, 20%);
+    -fx-button-action-pressed: derive(-fx-button-action-color, -2%);
+
+    -fx-border-color-custom: #949494;
+
+    -fx-thumb-color: #b3b3b3;
+
+    -fx-text-highlight-fill-color: #1e90ff;
+    -fx-error-prompt-text-color: -fx-text-base-color;
+    -fx-error-background-color: #945252;
+
+    -fx-about-date-color: #888888;
+    -fx-hyperlink-custom-color: #5d84ee;
+
+    -fx-autocomplete-tooltip-background-color: #f2f2bd;
+}
+
+.text-input {
+    -fx-text-fill: -fx-text-base-color;
+    -fx-highlight-fill: -fx-text-highlight-fill-color;
+    -fx-highlight-text-fill: white;
+    -fx-prompt-text-fill: derive(white, -45%);
+    -fx-background-color: -fx-button-body-color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: -fx-border-color-custom;
+    -fx-border-style: solid;
+    -fx-border-radius: 3;
+    -fx-border-width: 1px;
+}
+
+.text-input:focused {
+    -fx-prompt-text-fill: transparent;
+    -fx-border-color: -fx-focus-color;
+}
+
+.error-field {
+    -fx-prompt-text-fill: -fx-error-prompt-text-color;
+    -fx-background-color: -fx-error-background-color;
+}
+
+.button {
+    -fx-min-width: 110px;
+    -fx-pref-width: 110px;
+    -fx-max-width: 110px;
+    -fx-min-height: 25px;
+    -fx-pref-height: 25px;
+    -fx-max-height: 25px;
+}
+
+.button, .combo-box-base {
+    -fx-background-color: -fx-border-color-custom, -fx-border-color-custom, -fx-button-body-color;
+    -fx-background-insets: 0, 0, 1;
+    -fx-background-radius: 3, 3, 2;
+    -fx-text-fill: -fx-button-text-color;
+}
+
+.button:hover, .combo-box-base:hover {
+    -fx-background-color: -fx-border-color-custom, -fx-border-color-custom, -fx-button-hover;
+}
+
+.button:armed, .combo-box-base:showing {
+    -fx-background-color: -fx-border-color-custom, -fx-border-color-custom, -fx-button-pressed;
+}
+
+.button-action {
+    -fx-background-color: -fx-border-color-custom, -fx-border-color-custom, -fx-button-action-body-color;
+    -fx-text-fill: -fx-button-text-color;
+}
+
+.button-action:hover {
+    -fx-background-color: -fx-border-color-custom, -fx-border-color-custom, -fx-button-action-hover;
+}
+
+.button-action:armed {
+    -fx-background-color: -fx-border-color-custom, -fx-border-color-custom, -fx-button-action-pressed;
+}
+
+/**********************************************************************************************************************/
+
+.WindowFavorite,
+.WindowHistory {
+    -fx-padding: 10px;
+    -fx-vgap: 10px;
+}
+
+.WindowFavorite .webview-box,
+.WindowHistory .webview-box {
+    -fx-background-color: -fx-background-main-color;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-border-color: -fx-border-color-custom;
+}
+
+.WindowFavorite .webview-box .web-view,
+.WindowHistory .webview-box .web-view {
+    -fx-pref-height: 5000px;
+    -fx-pref-width: 5000px;
+    -fx-context-menu-enabled: false;
+}
+
+.WindowHistory HBox {
+    -fx-spacing: 20px;
+    -fx-alignment: top-right;
+}
+
+.WindowHistory .button-history {
+    -fx-min-width: 170px;
+    -fx-pref-width: 170px;
+    -fx-max-width: 170px;
+}
+
+/**********************************************************************************************************************/
+
+.WindowDelete,
+.WindowSubstanceActive {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}
+
+.WindowDelete .text-field {
+    -fx-min-width: 530px;
+    -fx-pref-width: 530px;
+    -fx-min-height: 28px;
+}
+
+.WindowSubstanceActive .text-field {
+    -fx-min-width: 510px;
+    -fx-pref-width: 510px;
+    -fx-min-height: 28px;
+}
+
+.WindowDelete HBox {
+    -fx-spacing: 20px;
+    -fx-alignment: top-right;
+}
+
+.WindowSubstanceActive HBox {
+    -fx-alignment: top-right;
+}
+
+/**********************************************************************************************************************/
+
+.WindowDate {
+    -fx-padding: 10px;
+}
+
+.WindowDate .text-field {
+    -fx-min-width: 240px;
+    -fx-pref-width: 240px;
+    -fx-min-height: 28px;
+}
+
+/**********************************************************************************************************************/
+
+.date-picker {
+    -fx-show-week-numbers: false;
+}
+
+.date-picker > .arrow-button {
+    -fx-background-color: -fx-border-color-custom, -fx-border-color-custom, -fx-button-body-color;
+    -fx-background-insets: 0, 0, 1;
+    -fx-background-radius: 3, 3, 2;
+}
+
+.date-picker > .arrow-button:hover {
+    -fx-background-color: -fx-border-color-custom, -fx-border-color-custom, -fx-button-hover;
+}
+
+.date-picker:focused {
+    -fx-background-color: -fx-focus-color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.date-picker:focused > .arrow-button {
+    -fx-background-color: -fx-focus-color, -fx-focus-color, -fx-button-body-color;
+}
+
+.date-picker-popup {
+    -fx-cursor: default;
+    -fx-background-color: -fx-border-color-custom;
+}
+
+.date-picker-popup > .month-year-pane {
+    -fx-padding: 4px;
+    -fx-background-color: -fx-button-body-color;
+}
+
+.date-picker-popup > * > .spinner > .button {
+    -fx-background-color: -fx-border-color-custom, -fx-button-body-color;
+    -fx-background-insets: 0, 1;
+}
+
+.date-picker-popup > * > .spinner > .button:focused {
+    -fx-background-color: -fx-border-color-custom, -fx-button-body-color;
+    -fx-background-insets: 0, 1;
+}
+
+.date-picker-popup > * > .spinner > .button:hover {
+    -fx-background-color: -fx-border-color-custom, -fx-button-hover;
+}
+
+.date-picker-popup > * > .spinner > .button:armed {
+    -fx-background-color: -fx-border-color-custom, -fx-button-pressed;
+}
+
+.date-picker-popup > .calendar-grid {
+    -fx-background-color: derive(-fx-button-body-color, 5%);
+}
+
+.date-picker-popup > .calendar-grid .text {
+    -fx-fill: -fx-text-background-color;
+}
+
+.date-picker-popup > * > .day-cell {
+    -fx-padding: 0px;
+}
+
+.date-picker-popup > * > .day-cell {
+    -fx-border-color: derive(-fx-border-color-custom, -20%);
+    -fx-background: derive(-fx-background-main-color, 30%);
+    -fx-background-color: -fx-background;
+    -fx-text-fill: -fx-text-background-color;
+}
+
+.date-picker-popup > * > .today {
+    -fx-background-color: derive(-fx-background-main-color, 30%);
+}
+
+.date-picker-popup > * > .day-cell:hover,
+.date-picker-popup > * > .selected,
+.date-picker-popup > * > .previous-month.selected,
+.date-picker-popup > * > .next-month.selected {
+    -fx-background: -fx-date-picker-color;
+}
+
+.date-picker-popup > * > .previous-month:hover,
+.date-picker-popup > * > .next-month:hover {
+    -fx-background: -fx-date-picker-color;
+}
+
+.date-picker-popup > * > .today:hover,
+.date-picker-popup > * > .today.selected {
+    -fx-background-color: -fx-date-picker-color;
+}
+
+.date-picker-popup > * > .day-cell:focused,
+.date-picker-popup > * > .today:focused {
+    -fx-background-color: -fx-date-picker-color;
+    -fx-background-insets: 0;
+}
+
+.date-picker-popup > * > .day-cell:focused:hover,
+.date-picker-popup > * > .today:focused:hover,
+.date-picker-popup > * > .selected:focused,
+.date-picker-popup > * > .today.selected:focused {
+    -fx-background-color: -fx-date-picker-color;
+}
+
+.date-picker-popup > * > .previous-month,
+.date-picker-popup > * > .next-month {
+    -fx-background: derive(-fx-button-body-color, 40%);
+}
+
+/**********************************************************************************************************************/
+
+.WindowAbout {
+    -fx-padding: 10px;
+    -fx-spacing: 8px;
+}
+
+.WindowAbout .content {
+    -fx-fill: -fx-text-base-color;
+}
+
+.WindowAbout .vbox-bottom {
+    -fx-alignment: top-right;
+    -fx-padding: 15px 0px 0px 0px;
+    -fx-spacing: 4px;
+}
+
+.WindowAbout .vbox-bottom .content {
+    -fx-font-size: 10px;
+    -fx-fill: -fx-about-date-color;
+}
+
+.WindowAbout .vbox-bottom .hyperlink {
+    -fx-font-size: 10px;
+    -fx-padding: 0px;
+    -fx-border-width: 0px;
+    -fx-text-fill: -fx-hyperlink-custom-color;
+    -fx-underline: false;
+}
+
+.WindowAbout .vbox-bottom .hyperlink:hover,
+.WindowAbout .vbox-bottom .hyperlink:hover:visited {
+    -fx-underline: true;
+}
+
+/**********************************************************************************************************************/
+
+.WindowWarning {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}
+
+.WindowWarning .hbox-content {
+    -fx-spacing: 10px;
+}
+
+.WindowWarning .hbox-content .warning-image {
+    -fx-opacity: 0.7;
+}
+
+.WindowWarning .hbox-content .content {
+    -fx-fill: -fx-text-base-color;
+}
+
+.WindowWarning .hbox-bottom {
+    -fx-alignment: bottom-right;
+}
+
+/**********************************************************************************************************************/
+
+.WindowDoubleListViewVertical {
+    -fx-spacing: 10px;
+    -fx-alignment: top-center;
+}
+
+/**********************************************************************************************************************/
+
+.WindowEspece,
+.WindowEspeceUpdate,
+.WindowConditionDelivrance {
+    -fx-padding: 10px;
+}
+
+.WindowEspeceUpdate HBox,
+.WindowConditionDelivrance HBox {
+    -fx-spacing: 20px;
+    -fx-alignment: top-right;
+}
+
+.WindowEspece .list-view,
+.WindowEspeceUpdate .list-view,
+.WindowConditionDelivrance .list-view {
+    -fx-background-color: -fx-border-color-custom, -fx-background-main-color;
+}
+
+.WindowEspece .list-view:focused,
+.WindowEspeceUpdate .list-view:focused,
+.WindowConditionDelivrance .list-view:focused {
+    -fx-background-color: -fx-focus-color, -fx-background-main-color;
+    -fx-background-insets: -1, 0;
+    -fx-background-radius: 0;
+}
+
+.WindowEspece .list-cell,
+.WindowEspeceUpdate .list-cell,
+.WindowConditionDelivrance .list-cell {
+    -fx-background: -fx-background-main-color;
+    -fx-background-color: -fx-background;
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.WindowEspece .list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected,
+.WindowEspeceUpdate .list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected,
+.WindowConditionDelivrance .list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected {
+    -fx-background: -fx-custom-color;
+    -fx-table-cell-border-color: -fx-custom-color;
+}
+
+.WindowEspece .list-cell:filled:selected,
+.WindowEspeceUpdate .list-cell:filled:selected,
+.WindowConditionDelivrance .list-cell:filled:selected {
+    -fx-background: -fx-custom-color;
+    -fx-table-cell-border-color: -fx-custom-color;
+}
+
+.WindowEspece .list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:focused,
+.WindowEspeceUpdate .list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:focused,
+.WindowConditionDelivrance .list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:focused {
+    -fx-background-color: -fx-custom-color;
+    -fx-background-insets: 0;
+}
+
+.WindowEspece .list-view .scroll-bar:vertical,
+.WindowEspece .list-view .scroll-bar:horizontal,
+.WindowEspeceUpdate .list-view .scroll-bar:vertical,
+.WindowEspeceUpdate .list-view .scroll-bar:horizontal,
+.WindowConditionDelivrance .list-view .scroll-bar:vertical,
+ .WindowConditionDelivrance .list-view .scroll-bar:horizontal {
+    -fx-background-color: -fx-custom-color;
+    -fx-background-insets: 0;
+}
+
+.WindowEspece .list-view .scroll-bar:vertical > .increment-button,
+.WindowEspece .list-view .scroll-bar:vertical > .decrement-button,
+.WindowEspeceUpdate .list-view .scroll-bar:vertical > .increment-button,
+.WindowEspeceUpdate .list-view .scroll-bar:vertical > .decrement-button,
+.WindowConditionDelivrance .list-view .scroll-bar:vertical > .increment-button,
+.WindowConditionDelivrance .list-view .scroll-bar:vertical > .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 0px 15px 0px 0px;
+}
+
+.WindowEspece .list-view .scroll-bar:horizontal > .increment-button,
+.WindowEspece .list-view .scroll-bar:horizontal > .decrement-button,
+.WindowEspeceUpdate .list-view .scroll-bar:horizontal > .increment-button,
+.WindowEspeceUpdate .list-view .scroll-bar:horizontal > .decrement-button,
+.WindowConditionDelivrance .list-view .scroll-bar:horizontal > .increment-button,
+.WindowConditionDelivrance .list-view .scroll-bar:horizontal > .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 0px 0px 12px 0px;
+}
+
+.WindowEspece .list-view .scroll-bar .increment-arrow,
+.WindowEspece .list-view .scroll-bar .decrement-arrow,
+.WindowEspeceUpdate .list-view .scroll-bar .increment-arrow,
+.WindowEspeceUpdate .list-view .scroll-bar .decrement-arrow,
+.WindowConditionDelivrance .list-view .scroll-bar .increment-arrow,
+.WindowConditionDelivrance .list-view .scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    -fx-padding: 0px;
+}
+
+.WindowEspece .list-view .scroll-bar:vertical .thumb,
+.WindowEspece .list-view .scroll-bar:horizontal .thumb,
+.WindowEspeceUpdate .list-view .scroll-bar:vertical .thumb,
+.WindowEspeceUpdate .list-view .scroll-bar:horizontal .thumb,
+.WindowConditionDelivrance .list-view .scroll-bar:vertical .thumb,
+.WindowConditionDelivrance .list-view .scroll-bar:horizontal .thumb {
+    -fx-background-color: -fx-thumb-color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.WindowEspece .list-view > .virtual-flow > .corner,
+.WindowEspeceUpdate .list-view > .virtual-flow > .corner,
+.WindowConditionDelivrance .list-view > .virtual-flow > .corner {
+    -fx-background-color: -fx-custom-color;
+}
+
+/**********************************************************************************************************************/
+
+.combo-box-base > .arrow-button > .arrow {
+    -fx-background-color: -fx-text-base-color;
+}
+
+.combo-box-popup > .list-view {
+    -fx-background-color: -fx-border-color-custom, -fx-border-color-custom, -fx-background-main-color;
+    -fx-background-insets: 0, 0, 1;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
+    -fx-background: -fx-background-main-color;
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover {
+    -fx-background-color: -fx-custom-color;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected,
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover {
+    -fx-background-color: -fx-custom-color;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .corner {
+    -fx-background-color: -fx-custom-color;
+}
+
+ComboBoxClass {
+    -fx-pref-width: 200px;
+    -fx-min-width: 200px;
+    -fx-max-width: 5000px;
+    -fx-min-height: 26px;
+    -fx-pref-height: 26px;
+    -fx-max-height: 26px;
+}
+
+ComboBoxClass .list-view .scroll-bar:vertical {
+    -fx-background-color: -fx-custom-color;
+    -fx-background-insets: 0;
+}
+
+ComboBoxClass .list-view .scroll-bar:vertical > .increment-button,
+ComboBoxClass .list-view .scroll-bar:vertical > .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 0px 15px 0px 0px;
+}
+
+ComboBoxClass .list-view .scroll-bar .increment-arrow,
+ComboBoxClass .list-view .scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    -fx-padding: 0px;
+}
+
+ComboBoxClass .list-view .scroll-bar:vertical .thumb {
+    -fx-background-color: -fx-thumb-color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+/**********************************************************************************************************************/
+
+.WindowUpdate {
+    -fx-padding: 10px;
+}
+
+.WindowUpdate .text-field {
+    -fx-min-width: 400px;
+    -fx-pref-width: 400px;
+    -fx-min-height: 28px;
+}
+
+.WindowUpdate .date-picker > .text-field {
+    -fx-min-width: 100px;
+    -fx-pref-width: 100px;
+    -fx-min-height: 28px;
+}
+
+.WindowUpdate .hbox-buttons-image {
+    -fx-spacing: 10px;
+    -fx-alignment: center-left;
+}
+
+.WindowUpdate .hbox-buttons-image .button {
+    -fx-min-width: 30px;
+    -fx-pref-width: 30px;
+    -fx-max-width: 30px;
+    -fx-min-height: 28px;
+    -fx-pref-height: 28px;
+    -fx-max-height: 28px;
+}
+
+.WindowUpdate .hbox-image {
+    -fx-pref-width: 100px;
+    -fx-max-width: 100px;
+    -fx-pref-height: 100px;
+    -fx-max-height: 100px;
+}
+
+.WindowUpdate .hbox-bottom {
+    -fx-spacing: 20px;
+    -fx-alignment: bottom-right;
+}
+
+/**********************************************************************************************************************/
+
+.WindowDoubleListViewHorizontal {
+    -fx-spacing: 10px;
+    -fx-alignment: top-center;
+}
+
+/**********************************************************************************************************************/
+
+.WindowVoieAdministration, .WindowExcipientQSP {
+    -fx-padding: 10px;
+}
+
+.WindowVoieAdministration HBox,
+.WindowExcipientQSP HBox {
+    -fx-spacing: 20px;
+    -fx-alignment: top-right;
+}
+
+.WindowVoieAdministration .list-view,
+.WindowExcipientQSP .list-view {
+    -fx-background-color: -fx-border-color-custom, -fx-background-main-color;
+}
+
+.WindowVoieAdministration .list-view:focused,
+.WindowExcipientQSP .list-view:focused {
+    -fx-background-color: -fx-focus-color, -fx-background-main-color;
+    -fx-background-insets: -1, 0;
+    -fx-background-radius: 0;
+}
+
+.WindowVoieAdministration .list-cell,
+.WindowExcipientQSP .list-cell {
+    -fx-background: -fx-background-main-color;
+    -fx-background-color: -fx-background;
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.WindowVoieAdministration .list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected,
+.WindowExcipientQSP .list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected {
+    -fx-background: -fx-custom-color;
+    -fx-table-cell-border-color: -fx-custom-color;
+}
+
+.WindowVoieAdministration .list-cell:filled:selected,
+.WindowExcipientQSP .list-cell:filled:selected {
+    -fx-background: -fx-custom-color;
+    -fx-table-cell-border-color: -fx-custom-color;
+}
+
+.WindowVoieAdministration .list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:focused,
+.WindowExcipientQSP .list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:focused {
+    -fx-background-color: -fx-custom-color;
+    -fx-background-insets: 0;
+}
+
+.WindowVoieAdministration .list-view .scroll-bar:vertical,
+.WindowVoieAdministration .list-view .scroll-bar:horizontal,
+.WindowExcipientQSP .list-view .scroll-bar:vertical {
+    -fx-background-color: -fx-custom-color;
+    -fx-background-insets: 0;
+}
+
+.WindowVoieAdministration .list-view .scroll-bar:vertical > .increment-button,
+.WindowVoieAdministration .list-view .scroll-bar:vertical > .decrement-button,
+.WindowExcipientQSP .list-view .scroll-bar:vertical > .increment-button,
+.WindowExcipientQSP .list-view .scroll-bar:vertical > .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 0px 15px 0px 0px;
+}
+
+.WindowVoieAdministration .list-view .scroll-bar:horizontal > .increment-button,
+.WindowVoieAdministration .list-view .scroll-bar:horizontal > .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 0px 0px 12px 0px;
+}
+
+.WindowVoieAdministration .list-view .scroll-bar .increment-arrow,
+.WindowVoieAdministration .list-view .scroll-bar .decrement-arrow,
+.WindowExcipientQSP .list-view .scroll-bar .increment-arrow,
+.WindowExcipientQSP .list-view .scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    -fx-padding: 0px;
+}
+
+.WindowVoieAdministration .list-view .scroll-bar:vertical .thumb,
+.WindowVoieAdministration .list-view .scroll-bar:horizontal .thumb,
+.WindowExcipientQSP .list-view .scroll-bar:vertical .thumb {
+    -fx-background-color: -fx-thumb-color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+/**********************************************************************************************************************/
+
+.WindowComposition,
+.WindowConditionnementPrimaireCodeATC {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}
+
+.WindowComposition .hbox-bottom,
+.WindowConditionnementPrimaireCodeATC .hbox-bottom {
+    -fx-spacing: 20px;
+    -fx-alignment: bottom-right;
+}
+
+.WindowComposition .hbox-add-substance-active,
+.WindowConditionnementPrimaireCodeATC .hbox-add-conditionnement-primaire,
+.WindowConditionnementPrimaireCodeATC .hbox-add-code-atcvet {
+    -fx-spacing: 10px;
+    -fx-alignment: center-left;
+}
+
+.WindowComposition .hbox-add-substance-active .button,
+.WindowConditionnementPrimaireCodeATC .hbox-add-conditionnement-primaire .button,
+.WindowConditionnementPrimaireCodeATC .hbox-add-code-atcvet .button {
+    -fx-min-width: 30px;
+    -fx-pref-width: 30px;
+    -fx-max-width: 30px;
+    -fx-min-height: 28px;
+    -fx-pref-height: 28px;
+    -fx-max-height: 28px;
+}
+
+.WindowComposition .scroll-pane {
+    -fx-background-color: -fx-border-color-custom, -fx-background-main-color;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 0;
+    -fx-hbar-policy: never;
+    -fx-fit-to-width: true;
+    -fx-min-height: 150px;
+    -fx-pref-height: 150px;
+}
+
+.WindowConditionnementPrimaireCodeATC .scroll-pane {
+    -fx-background-color: -fx-border-color-custom, -fx-background-main-color;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 0;
+    -fx-hbar-policy: never;
+    -fx-fit-to-width: true;
+    -fx-min-height: 114px;
+    -fx-pref-height: 114px;
+}
+
+.WindowComposition .scroll-pane VBox,
+.WindowConditionnementPrimaireCodeATC .scroll-pane VBox {
+    -fx-padding: 6px 4px 6px 4px;
+    -fx-spacing: 8px;
+}
+
+.WindowComposition .scroll-pane VBox HBox,
+.WindowConditionnementPrimaireCodeATC .scroll-pane VBox HBox {
+    -fx-spacing: 10px;
+}
+
+.WindowComposition .scroll-pane VBox HBox .button,
+.WindowConditionnementPrimaireCodeATC .scroll-pane VBox HBox .button {
+    -fx-min-width: 30px;
+    -fx-pref-width: 30px;
+    -fx-max-width: 30px;
+    -fx-min-height: 28px;
+    -fx-pref-height: 28px;
+    -fx-max-height: 28px;
+}
+
+.WindowComposition .scroll-pane VBox HBox .text-field {
+    -fx-min-width: 410px;
+    -fx-pref-width: 410px;
+    -fx-max-width: 5000px;
+    -fx-min-height: 28px;
+}
+
+.WindowComposition .scroll-pane VBox HBox .quantite {
+    -fx-min-width: 115px;
+    -fx-pref-width: 115px;
+    -fx-max-width: 5000px;
+    -fx-min-height: 28px;
+}
+
+.WindowComposition .scroll-pane VBox HBox .unite {
+    -fx-min-width: 65px;
+    -fx-pref-width: 65px;
+    -fx-max-width: 5000px;
+    -fx-min-height: 28px;
+}
+
+.WindowConditionnementPrimaireCodeATC .scroll-pane VBox HBox .field {
+    -fx-min-width: 600px;
+    -fx-pref-width: 600px;
+    -fx-max-width: 5000px;
+    -fx-min-height: 28px;
+}
+
+.WindowComposition .scroll-pane .scroll-bar:vertical,
+.WindowConditionnementPrimaireCodeATC .scroll-pane .scroll-bar:vertical {
+    -fx-background-color: -fx-custom-color;
+    -fx-background-insets: 1 1 1 0, 1;
+    -fx-padding: 0px;
+}
+
+.WindowComposition .scroll-pane .scroll-bar:vertical > .increment-button,
+.WindowComposition .scroll-pane .scroll-bar:vertical > .decrement-button,
+.WindowConditionnementPrimaireCodeATC .scroll-pane .scroll-bar:vertical > .increment-button,
+.WindowConditionnementPrimaireCodeATC .scroll-pane .scroll-bar:vertical > .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 0px 12px 0px 0px;
+}
+
+.WindowComposition .scroll-pane .scroll-bar .increment-arrow,
+.WindowComposition .scroll-pane .scroll-bar .decrement-arrow,
+.WindowConditionnementPrimaireCodeATC .scroll-pane .scroll-bar .increment-arrow,
+.WindowConditionnementPrimaireCodeATC .scroll-pane .scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    -fx-padding: 0px;
+}
+
+.WindowComposition .scroll-pane .scroll-bar:vertical .thumb,
+.WindowConditionnementPrimaireCodeATC .scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: -fx-thumb-color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+/**********************************************************************************************************************/
+
+.WindowModeleDestineVente {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}
+
+.WindowModeleDestineVente .hbox-bottom {
+    -fx-spacing: 20px;
+    -fx-alignment: bottom-right;
+}
+
+.WindowModeleDestineVente .hbox-add-modele-destine-vente {
+    -fx-spacing: 10px;
+    -fx-alignment: center-left;
+}
+
+.WindowModeleDestineVente .hbox-add-modele-destine-vente .button {
+    -fx-min-width: 30px;
+    -fx-pref-width: 30px;
+    -fx-max-width: 30px;
+    -fx-min-height: 28px;
+    -fx-pref-height: 28px;
+    -fx-max-height: 28px;
+}
+
+.WindowModeleDestineVente .scroll-pane {
+    -fx-background-color: -fx-border-color-custom, -fx-background-main-color;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 0;
+    -fx-hbar-policy: never;
+    -fx-fit-to-width: true;
+    -fx-min-height: 150px;
+    -fx-pref-height: 150px;
+}
+
+.WindowModeleDestineVente .scroll-pane VBox {
+    -fx-padding: 6px 4px 6px 4px;
+    -fx-spacing: 8px;
+}
+
+.WindowModeleDestineVente .scroll-pane VBox HBox {
+    -fx-spacing: 10px;
+}
+
+.WindowModeleDestineVente .scroll-pane VBox HBox .button {
+    -fx-min-width: 30px;
+    -fx-pref-width: 30px;
+    -fx-max-width: 30px;
+    -fx-min-height: 28px;
+    -fx-pref-height: 28px;
+    -fx-max-height: 28px;
+}
+
+.WindowModeleDestineVente .scroll-pane VBox HBox .libelle-fr {
+    -fx-min-width: 470px;
+    -fx-pref-width: 470px;
+    -fx-max-width: 5000px;
+    -fx-min-height: 28px;
+}
+
+.WindowModeleDestineVente .scroll-pane VBox HBox .libelle-eu {
+    -fx-min-width: 320px;
+    -fx-pref-width: 320px;
+}
+
+.WindowModeleDestineVente .scroll-pane VBox HBox .code-gtin {
+    -fx-min-width: 110px;
+    -fx-pref-width: 110px;
+    -fx-max-width: 5000px;
+    -fx-min-height: 28px;
+}
+
+.WindowModeleDestineVente .scroll-pane VBox HBox .numero-amm {
+    -fx-min-width: 140px;
+    -fx-pref-width: 140px;
+    -fx-max-width: 5000px;
+    -fx-min-height: 28px;
+}
+
+.WindowModeleDestineVente .scroll-pane .scroll-bar:vertical {
+    -fx-background-color: -fx-custom-color;
+    -fx-background-insets: 1 1 1 0, 1;
+    -fx-padding: 0px;
+}
+
+.WindowModeleDestineVente .scroll-pane .scroll-bar:vertical > .increment-button,
+.WindowModeleDestineVente .scroll-pane .scroll-bar:vertical > .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 0px 12px 0px 0px;
+}
+
+.WindowModeleDestineVente .scroll-pane .scroll-bar .increment-arrow,
+.WindowModeleDestineVente .scroll-pane .scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    -fx-padding: 0px;
+}
+
+.WindowModeleDestineVente .scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: -fx-thumb-color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+/**********************************************************************************************************************/
+
+.WindowRcp {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}
+
+.WindowRcp .hbox-bottom {
+    -fx-spacing: 20px;
+    -fx-alignment: bottom-right;
+}
+
+.WindowRcp .scroll-pane {
+    -fx-background-color: -fx-border-color-custom, -fx-background-main-color;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 0;
+    -fx-hbar-policy: never;
+    -fx-fit-to-width: true;
+    -fx-min-height: 335px;
+    -fx-pref-height: 335px;
+}
+
+.WindowRcp .scroll-pane .label {
+    -fx-padding: 0px 0px 3px 0px;
+}
+
+.WindowRcp .scroll-pane .vbox-component-list {
+    -fx-padding: 6px 4px 6px 4px;
+    -fx-spacing: 10px;
+}
+
+.WindowRcp .scroll-pane .vbox-component-list .field {
+    -fx-min-width: 650px;
+    -fx-pref-width: 650px;
+    -fx-max-width: 5000px;
+    -fx-min-height: 28px;
+}
+
+.WindowRcp .scroll-pane .vbox-component-list .text-area {
+    -fx-background-color: -fx-button-body-color;
+    -fx-min-height: 100px;
+    -fx-pref-height: 100px;
+    -fx-max-height: 6000px;
+    -fx-wrap-text: true;
+}
+
+.text-area {
+    -fx-background-color: -fx-button-body-color;
+}
+.text-area > .scroll-pane {
+    -fx-background-color: null;
+}
+.text-area > .scroll-pane > .scroll-bar:vertical {
+    -fx-background-radius: 0 2 2 0;
+}
+
+.text-area .content {
+    -fx-background-color: -fx-button-body-color;
+    -fx-background-radius: 0;
+}
+.text-area:focused .content {
+    -fx-background-color: -fx-button-body-color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.WindowRcp .scroll-pane .scroll-bar:vertical {
+    -fx-background-color: -fx-custom-color;
+    -fx-background-insets: 1 1 1 0, 1;
+    -fx-padding: 0px;
+}
+
+.WindowRcp .scroll-pane .scroll-bar:vertical > .increment-button,
+.WindowRcp .scroll-pane .scroll-bar:vertical > .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 0px 12px 0px 0px;
+}
+
+.WindowRcp .scroll-pane .scroll-bar .increment-arrow,
+.WindowRcp .scroll-pane .scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    -fx-padding: 0px;
+}
+
+.WindowRcp .scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: -fx-thumb-color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.WindowRcp .scroll-pane .vbox-component-list .text-area > .scroll-pane > .scroll-bar:vertical .thumb {
+    -fx-background-radius: 0 2 2 0;
+}
+
+/**********************************************************************************************************************/
+
+.WindowRcpImage {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}
+
+.WindowRcpImage .hbox-bottom {
+    -fx-spacing: 20px;
+    -fx-alignment: bottom-right;
+}
+
+.WindowRcpImage .hbox-add-image {
+    -fx-spacing: 10px;
+    -fx-alignment: center-left;
+}
+
+.WindowRcpImage .hbox-add-image .button {
+    -fx-min-width: 30px;
+    -fx-pref-width: 30px;
+    -fx-max-width: 30px;
+    -fx-min-height: 28px;
+    -fx-pref-height: 28px;
+    -fx-max-height: 28px;
+}
+
+.WindowRcpImage .scroll-pane {
+    -fx-background-color: -fx-border-color-custom, -fx-background-main-color;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 0;
+    -fx-min-height: 170px;
+    -fx-pref-height: 170px;
+}
+
+.WindowRcpImage .scroll-pane HBox {
+    -fx-padding: 6px 4px 6px 4px;
+    -fx-spacing: 8px;
+}
+
+.WindowRcpImage .scroll-pane HBox VBox {
+    -fx-spacing: 10px;
+    -fx-alignment: top-center;
+}
+
+.WindowRcpImage .scroll-pane HBox VBox .button {
+    -fx-min-width: 30px;
+    -fx-pref-width: 30px;
+    -fx-max-width: 30px;
+    -fx-min-height: 28px;
+    -fx-pref-height: 28px;
+    -fx-max-height: 28px;
+}
+
+.WindowRcpImage .scroll-pane .scroll-bar:horizontal {
+    -fx-background-color: -fx-custom-color;
+    -fx-background-insets: 0 1 1 1, 1;
+    -fx-padding: 0px;
+}
+
+.WindowRcpImage .scroll-pane .scroll-bar:horizontal > .increment-button,
+.WindowRcpImage .scroll-pane .scroll-bar:horizontal > .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 0px 0px 12px 0px;
+}
+
+.WindowRcpImage .scroll-pane .scroll-bar .increment-arrow,
+.WindowRcpImage .scroll-pane .scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    -fx-padding: 0px;
+}
+
+.WindowRcpImage .scroll-pane .scroll-bar:horizontal .thumb {
+    -fx-background-color: -fx-thumb-color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+
+/**********************************************************************************************************************/
+
+.AutocompletePopup {
+    -fx-background-color: -fx-background-main-color;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-border-color: -fx-border-color-custom;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0px;
+}
+
+.AutocompletePopup .list-cell {
+    -fx-background: -fx-background-main-color;
+    -fx-background-color: -fx-background;
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.AutocompletePopup:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected {
+    -fx-background: -fx-custom-color;
+    -fx-table-cell-border-color: -fx-custom-color;
+}
+
+.AutocompletePopup .list-cell:filled:selected {
+    -fx-background: -fx-custom-color;
+    -fx-table-cell-border-color: -fx-custom-color;
+}
+
+.AutocompletePopup:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:focused {
+    -fx-background-color: -fx-custom-color;
+    -fx-background-insets: 0;
+}
+
+.AutocompletePopup .scroll-bar:horizontal,
+.AutocompletePopup .scroll-bar:vertical {
+    -fx-background-color: -fx-custom-color;
+    -fx-background-insets: 0;
+}
+
+.AutocompletePopup .scroll-bar:horizontal > .increment-button,
+.AutocompletePopup .scroll-bar:horizontal > .decrement-button,
+.AutocompletePopup .scroll-bar:vertical > .increment-button,
+.AutocompletePopup .scroll-bar:vertical > .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 0px;
+}
+
+.AutocompletePopup .scroll-bar .increment-arrow,
+.AutocompletePopup .scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    -fx-padding: 0px;
+}
+
+.AutocompletePopup .tooltip {
+    -fx-text-fill: black;
+    -fx-background: -fx-autocomplete-tooltip-background-color;
+    -fx-background-color: -fx-autocomplete-tooltip-background-color;
+    -fx-background-radius: 4px;
+    -fx-padding: 3px;
+    -fx-effect: null;
+    -fx-font-size: 11px;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+}

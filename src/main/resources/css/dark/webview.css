@@ -1,0 +1,117 @@
+body {
+    font-family: 'Noto Sans';
+    font-size: 13px;
+    line-height: 22px;
+    margin: 0px;
+    background-color: #444444;
+}
+
+.body-result {
+    padding: 7px;
+    color: #d4d4d4;
+}
+
+.rcp-title {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.annexe-title {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0px 15px 15px 0px;
+    text-align: center;
+}
+
+table {
+    font-family: 'Noto Sans';
+    font-size: 13px;
+    width: 100%;
+    border: 0px;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #d4d4d4;
+    background-color: #6f6f6f;
+}
+
+table tbody td.label {
+    text-align: right;
+    font-weight: bold;
+    width: 200px;
+}
+
+table tbody td.title {
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 15px;
+    background-color: #444444;
+}
+
+table tbody td.content {
+    line-height: 18px;
+    padding-right: 15px;
+    background-color: #444444;
+}
+
+.rcp-div {
+    text-align: justify;
+}
+
+.rcp-div .title {
+    font-weight: bold;
+}
+
+.rcp-div .content {
+    padding: 10px 0px;
+}
+
+.image-title {
+    padding-top: 5px;
+}
+
+.results-number {
+    font-size: 12px;
+    text-align: right;
+    color: #a4a4a4;
+    padding-bottom: 8px;
+}
+
+.title-date {
+    font-weight: bold;
+    padding: 10px 0px;
+    font-size: 14px;
+}
+
+.result {
+    padding-bottom: 8px;
+}
+
+.result a {
+    color: #91c4ff;
+    text-decoration: none;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: #91c4ff;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #777777;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #777777;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b3b3b3;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    min-height: 50px;
+}
