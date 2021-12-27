@@ -1,4 +1,4 @@
-To illustrate and to test the use of the API from this page, an application in JavaFX has been built.
+To illustrate and to test the use of the API from this page https://github.com/sasabaza/medicament-vet-api, an application in JavaFX has been built.
 
 Most of the code is shared on this repository.
 
